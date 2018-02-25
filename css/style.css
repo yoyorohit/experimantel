@@ -103,13 +103,18 @@ body {
 .u-margen-big {
   margin-bottom: 8rem; }
 
+.u-margen2-big {
+  margin-top: 8rem; }
+
 .card {
-  transition: all 0.8s;
+  transition: all .8s ease;
   transform-style: preserve-3d;
   perspective: 100rem;
   position: relative;
   height: 40rem;
-  font-size: 2rem; }
+  font-size: 2rem;
+  border-radius: 1rem;
+  color: #a3a2a2; }
   .card-side {
     height: 40rem;
     position: absolute;
@@ -123,14 +128,68 @@ body {
     .card-side-back {
       transform: rotateY(180deg); }
       .card-side-back-1 {
-        background-image: linear-gradient(to right bottom, #fadabd, #ec7200); }
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card-side-back-2 {
         background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card-side-back-3 {
-        background-image: linear-gradient(to right bottom, #8998eb, #041da7); }
-
-.card:hover {
-  transform: rotateY(180deg); }
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover {
+    transform: rotateY(180deg); }
+  .card-picture {
+    height: 19rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-size: cover;
+    background-blend-mode: color;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; }
+    .card-picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(image/london.jpg); }
+    .card-picture-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(image/berlin.jpg); }
+    .card-picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(image/san-francisco.jpg); }
+  .card-heading {
+    text-align: right;
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 9rem;
+    right: 1.4rem; }
+  .card-heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card-heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card-heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card-heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card-details {
+    padding: 3rem;
+    text-transform: capitalize; }
+    .card-details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card-details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: .4rem; }
+        .card-details ul li:not(:last-child) {
+          border-bottom: 1px solid #a3a2a2; }
+  .card-action {
+    color: #ffffff;
+    font-size: 2rem;
+    vertical-align: center;
+    padding: 30% 0;
+    text-transform: uppercase; }
+    .card-action span {
+      font-size: 7rem;
+      font-weight: 200; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -138,7 +197,6 @@ body {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 20rem;
-  background-color: #fff;
   transition: all .2s;
   font-size: 1.6rem;
   position: relative; }
@@ -152,11 +210,22 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); }
 
 .btn--white {
+  background-color: #fff;
   text-decoration: none;
   color: black; }
   .btn--white::after {
     background-color: #fff; }
   .btn--white:hover::after {
+    transform: scalex(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn--green {
+  background-color: #28b485;
+  text-decoration: none;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #28b485; }
+  .btn--green:hover::after {
     transform: scalex(1.4) scaleY(1.6);
     opacity: 0; }
 
