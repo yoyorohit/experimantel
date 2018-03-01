@@ -438,3 +438,16 @@ body {
   position: relative; }
   .section-story-btn {
     margin: 2% 40%; }
+
+.section-book {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  padding: 10rem 15rem; }
+
+.book {
+  border-radius: 3px;
+  background-size: 100%;
+  background-image: linear-gradient(102deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../image/5.jpg);
+  height: 50rem; }
+  .book-form {
+    padding: 2rem;
+    width: 50%; }
