@@ -83,11 +83,12 @@
         font-size: 2rem;
         display: inline-block;
         text-decoration: none;
-        border-bottom: .3rem solid rgb(11, 241, 50);
+        border-bottom: .1rem solid rgb(11, 241, 50);
         color: rgb(11, 241, 50);
         padding: 1rem;
-
+        text-transform: capitalize;
         transition: all .2s;
+        backface-visibility: hidden;
     }
     
 

@@ -249,10 +249,12 @@ body {
   font-size: 2rem;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 0.3rem solid #0bf132;
+  border-bottom: 0.1rem solid #0bf132;
   color: #0bf132;
   padding: 1rem;
-  transition: all .2s; }
+  text-transform: capitalize;
+  transition: all .2s;
+  backface-visibility: hidden; }
 
 .btn-text:hover {
   background-color: #28b485;
@@ -286,6 +288,65 @@ body {
       transform: scale(1.2);
       outline: 2rem solid #55c57a;
       z-index: 20; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 6rem;
+  padding-left: 9rem;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  transform: skewX(-12deg); }
+  .story-picture {
+    background-color: red;
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(12deg);
+    position: relative;
+    backface-visibility: hidden; }
+  .story img {
+    height: 100%;
+    transform: scale(1.4);
+    transition: all .4s;
+    backface-visibility: hidden; }
+  .story h3 {
+    transform: skewX(12deg); }
+  .story p {
+    transform: skewX(12deg); }
+  .story-caption {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, 20%);
+    color: #fff;
+    transition: all .4s;
+    backface-visibility: hidden;
+    opacity: 0; }
+  .story:hover .story-caption {
+    transform: translate(-30%, -50%);
+    opacity: 1; }
+  .story:hover img {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .55;
+  overflow: hidden; }
+  .bg-video-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(115, 240, 13, 0.7), rgba(14, 170, 27, 0.7)), url(image/1.jpg);
@@ -369,3 +430,11 @@ body {
   padding: 20rem 20rem 20rem 20rem;
   margin-top: -9rem;
   text-align: center; }
+
+.section-story {
+  backface-visibility: hidden;
+  padding: 20rem 20rem 20rem 20rem;
+  margin-top: -9rem;
+  position: relative; }
+  .section-story-btn {
+    margin: 2% 40%; }
